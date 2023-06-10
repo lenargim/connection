@@ -1,0 +1,28 @@
+.form
+  &__rows
+    display: flex
+    flex-direction: column
+    gap: 40px
+  &__row
+    position: relative
+  .errored
+    display: none
+  input, textarea
+    font: 300 50px/1.2 $mainFont
+    border-bottom: 2px solid $black
+    color: $black
+    &::placeholder
+      color: $black50
+  textarea
+    height: 1.2em
+    overflow: hidden
+  .hiddendiv
+    position: absolute
+    z-index: -1
+    opacity: 0
+    width: 100%
+    font: 300 50px/1.2 $mainFont
+    white-space: pre-wrap
+    word-wrap: break-word
+  &__after
+    color: #808080

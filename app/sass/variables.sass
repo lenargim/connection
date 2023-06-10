@@ -1,0 +1,20 @@
+$black: #000
+$black50: #282828
+$orange: #FC6522
+$purple: #9747FF
+$error: #EE0505
+$gray: #808080
+
+$mainFont: "Manrope", sans-serif
+
+@mixin max($breakpoint)
+  @media screen and (max-width: $breakpoint + 'px')
+    @content
+
+@mixin min($breakpoint)
+  @media screen and (min-width: $breakpoint + 'px')
+    @content
+
+@mixin between($min, $max)
+  @media screen and (min-width: $min + 'px') and (max-width: $max - 1 + 'px')
+    @content

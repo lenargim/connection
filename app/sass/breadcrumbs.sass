@@ -1,0 +1,16 @@
+.breadcrumbs
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  gap: 31px
+  margin-bottom: 40px
+  a
+    color: #8C8C8C
+    white-space: nowrap
+    flex-shrink: 0
+    font: 400 18px/1.2 $mainFont
+    position: relative
+    &:not(:last-of-type):after
+      content: '/'
+      position: absolute
+      left: calc(100% + 12px)

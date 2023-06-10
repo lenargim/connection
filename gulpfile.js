@@ -1,151 +1,61 @@
-let preprocessor = 'sass', // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
-		fileswatch   = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
+var gulp = require('gulp'),
+  connect = require('gulp-connect-php'),
+  sass = require('gulp-sass')(require('sass')),
+  autoprefixer = require('gulp-autoprefixer'),
+  cleanCSS = require('gulp-clean-css'),
+  rename = require('gulp-rename'),
+  browserSync = require('browser-sync'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify-es').default;
 
-import pkg from 'gulp'
-const { gulp, src, dest, parallel, series, watch } = pkg
+gulp.task('connect-sync', function () {
+  connect.server({
+    base: 'app'
+  }, function () {
+    browserSync({
+      proxy: '127.0.0.1:8000',
+      // server: {
+      //   baseDir: 'app'
+      // },
+    });
+  });
 
-import browserSync   from 'browser-sync'
-import bssi          from 'browsersync-ssi'
-import ssi           from 'ssi'
-import webpackStream from 'webpack-stream'
-import webpack       from 'webpack'
-import TerserPlugin  from 'terser-webpack-plugin'
-import gulpSass      from 'gulp-sass'
-import dartSass      from 'sass'
-import sassglob      from 'gulp-sass-glob'
-const  sass          = gulpSass(dartSass)
-import less          from 'gulp-less'
-import lessglob      from 'gulp-less-glob'
-import styl          from 'gulp-stylus'
-import stylglob      from 'gulp-noop'
-import postCss       from 'gulp-postcss'
-import cssnano       from 'cssnano'
-import autoprefixer  from 'autoprefixer'
-import imagemin      from 'gulp-imagemin'
-import changed       from 'gulp-changed'
-import concat        from 'gulp-concat'
-import rsync         from 'gulp-rsync'
-import {deleteAsync} from 'del'
+  gulp.watch('**/*.php').on('change', function () {
+    browserSync.reload();
+  });
+});
 
-function browsersync() {
-	browserSync.init({
-		server: {
-			baseDir: 'app/',
-			middleware: bssi({ baseDir: 'app/', ext: '.html' })
-		},
-		ghostMode: { clicks: false },
-		notify: false,
-		online: true,
-		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
-	})
-}
 
-function scripts() {
-	return src(['app/js/*.js', '!app/js/*.min.js'])
-		.pipe(webpackStream({
-			mode: 'production',
-			performance: { hints: false },
-			plugins: [
-				new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery' }), // jQuery (npm i jquery)
-			],
-			module: {
-				rules: [
-					{
-						test: /\.m?js$/,
-						exclude: /(node_modules)/,
-						use: {
-							loader: 'babel-loader',
-							options: {
-								presets: ['@babel/preset-env'],
-								plugins: ['babel-plugin-root-import']
-							}
-						}
-					}
-				]
-			},
-			optimization: {
-				minimize: true,
-				minimizer: [
-					new TerserPlugin({
-						terserOptions: { format: { comments: false } },
-						extractComments: false
-					})
-				]
-			},
-		}, webpack)).on('error', (err) => {
-			this.emit('end')
-		})
-		.pipe(concat('app.min.js'))
-		.pipe(dest('app/js'))
-		.pipe(browserSync.stream())
-}
+gulp.task('styles', function () {
+  return gulp.src('app/sass/styles.sass')
+    .pipe(sass({}, {allowEmpty: true}).on('error', sass.logError))
+    .pipe(rename({suffix: '.min', prefix: ''}))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 versions']
+    }))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.stream());
+});
 
-function styles() {
-	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`])
-		.pipe(eval(`${preprocessor}glob`)())
-		.pipe(eval(preprocessor)({ 'include css': true }))
-		.pipe(postCss([
-			autoprefixer({ grid: 'autoplace' }),
-			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
-		]))
-		.pipe(concat('app.min.css'))
-		.pipe(dest('app/css'))
-		.pipe(browserSync.stream())
-}
 
-function images() {
-	return src(['app/images/src/**/*'])
-		.pipe(changed('app/images/dist'))
-		.pipe(imagemin())
-		.pipe(dest('app/images/dist'))
-		.pipe(browserSync.stream())
-}
+gulp.task('scripts', function () {
+  return gulp.src('app/libs/**/*.js', {allowEmpty: true})
+    .pipe(concat('libs.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('app/js/'))
+    .pipe(browserSync.reload({stream: true}));
+});
 
-function buildcopy() {
-	return src([
-		'{app/js,app/css}/*.min.*',
-		'app/images/**/*.*',
-		'!app/images/src/**/*',
-		'app/fonts/**/*'
-	], { base: 'app/' })
-	.pipe(dest('dist'))
-}
+gulp.task('code', function () {
+  return gulp.src('app/**/*.html')
+    .pipe(browserSync.reload({stream: true}))
+});
 
-async function buildhtml() {
-	let includes = new ssi('app/', 'dist/', '/**/*.html')
-	includes.compile()
-	await deleteAsync('dist/parts', { force: true })
-}
+gulp.task('watch', function () {
+  gulp.watch('app/sass/**/*.sass', gulp.parallel('styles'));
+  gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts'));
+  gulp.watch('app/**/*.html', gulp.parallel('code'));
+});
 
-async function cleandist() {
-	await deleteAsync('dist/**/*', { force: true })
-}
-
-function deploy() {
-	return src('dist/')
-		.pipe(rsync({
-			root: 'dist/',
-			hostname: 'username@yousite.com',
-			destination: 'yousite/public_html/',
-			clean: true, // Mirror copy with file deletion
-			include: [/* '*.htaccess' */], // Included files to deploy,
-			exclude: [ '**/Thumbs.db', '**/*.DS_Store' ],
-			recursive: true,
-			archive: true,
-			silent: false,
-			compress: true
-		}))
-}
-
-function startwatch() {
-	watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles)
-	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
-	watch('app/images/src/**/*', { usePolling: true }, images)
-	watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
-}
-
-export { scripts, styles, images, deploy }
-export let assets = series(scripts, styles, images)
-export let build = series(cleandist, images, scripts, styles, buildcopy, buildhtml)
-
-export default series(scripts, styles, images, parallel(browsersync, startwatch))
+gulp.task('default', gulp.parallel('styles', 'scripts', 'connect-sync', 'watch'));

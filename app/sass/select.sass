@@ -1,0 +1,54 @@
+.dropdown
+  position: relative
+  height: 78px
+
+#select
+  display: none
+
+.select
+  position: absolute
+  border-radius: 10px
+  background: #FAFAFA
+  width: 100%
+  &.open
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    .select__dropdown
+      max-height: 220px
+  &.filled
+    .select__label
+      font: 300 12px/1.2 $mainFont
+      position: absolute
+      top: 12px
+      left: 12px
+    .select__box
+      padding: 30px 75px 20px 12px
+  &__box
+    padding: 21px 75px 29px 12px
+    cursor: pointer
+  &__label
+    font: 400 23px/1.2 $mainFont
+    color: #686868
+  &__arrow
+    position: absolute
+    width: 24px
+    height: 24px
+    background: url("../img/svg/dropdown-arrow.svg") center/contain no-repeat
+    top: 23px
+    right: 24px
+  &__dropdown
+    max-height: 0
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    padding: 0 12px
+    overflow-y: auto
+  &__item
+    font: 400 20px/1.2 $mainFont
+    padding: 20px 0
+    cursor: pointer
+    border-top: 1px solid #eaeaea
+    &:hover
+      color: $orange
+  &__choose
+    color: $orange
+    font: 400 23px/1.2 $mainFont
