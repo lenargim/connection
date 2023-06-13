@@ -1,64 +1,8 @@
 <?php include('partials/head.php'); ?>
 <?php include('partials/header.php'); ?>
-    <main class="main">
-        <a href="#" class="download-fixed">
-            <img src="/img/logo-no-bg.png" alt="logo">
-            <span>Скачать приложение</span>
-        </a>
+
+    <main class="mb120">
         <div class="container">
-            <svg class="connection">
-                <use xlink:href="<?php echo $sprite_main; ?>#connection"></use>
-            </svg>
-            <a href="#" class="button presentation mb40">СКАЧАТЬ ПРЕЗЕНТАЦИЮ</a>
-            <div class="video mb100">
-                <video preload="none" poster="/img/video.jpg">
-                    <source type="video/webm"
-                            src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/54/Yawning_kitten.ogv/Yawning_kitten.ogv.480p.vp9.webm">
-                </video>
-                <div class="state">
-                    <svg>
-                        <use xlink:href="<?php echo $sprite_main; ?>#play""></use>
-                    </svg>
-                </div>
-            </div>
-            <div class="mb100" id="mission">
-                <h3 class="subheader square mb40">миссия</h3>
-                <p class="body1">«Связь» сервис проактивного взаимодействия с пациентами. Мы создаем и развиваем
-                    полезные для общества
-                    IT-продукты. Наши сервисы упрощают взаимодействие с государственным здравоохранением и помогают
-                    людям строить осознанные и бережные отношения со своим здоровьем.</p>
-            </div>
-            <div class="mb52">
-                <h3 class="subheader square mb40">ПРИЛОЖЕНИЕ «СВЯЗЬ»</h3>
-                <div class="app">
-                    <div class="app__item">
-                        <img src="/img/app1.png" alt="">
-                        <span class="caption">Медиа<br>о здоровье</span>
-                    </div>
-                    <div class="app__item">
-                        <img src="/img/app2.png" alt="">
-                        <span class="caption">Отслеживание показателей здоровья</span>
-                    </div>
-                    <div class="app__item">
-                        <img src="/img/app3.png" alt="">
-                        <span class="caption">Напоминания<br>о приеме лекарств</span>
-                    </div>
-                    <div class="app__item">
-                        <img src="/img/app4.png" alt="">
-                        <span class="caption">Выписки<br>по итогам приемов </span>
-                    </div>
-                </div>
-            </div>
-            <div class="download mb100">
-                <img src="/img/qr.jpg" alt="Скачать приложение">
-                <span class="body3">Скачать приложение</span>
-            </div>
-            <div class="mb100">
-                <h3 class="subheader square mb40">ПРОДУКТЫ И РЕШЕНИЯ «СВЯЗИ»</h3>
-                <p class="body3 mb40">Мы разрабатываем технологичные решения, которые трансформируют
-                    устоявшиеся системы.</p>
-                <?php include('partials/products-list.php'); ?>
-            </div>
             <div class="mb52">
                 <h3 class="subheader square mb40">КОМАНДА</h3>
                 <p class="body3 mb40">«Связь» это в первую очередь люди.</p>
@@ -81,7 +25,7 @@
                     <a href="/employee.php" class="team__item">
                         <div class="team__img mb20"><img src="/img/team/team4.jpg" alt="Саша Резанова"></div>
                         <div class="team__name caption">Саша Резанова</div>
-                        <div class="team__position">Должность</div>
+                        <div class="team__position">Специалист технической поддержки и очень важный человек</div>
                     </a>
                     <a href="/employee.php" class="team__item">
                         <div class="team__img mb20"><img src="/img/team/team5.jpg" alt="Аяна"></div>
@@ -181,67 +125,6 @@
                         <div class="team__position">Должность</div>
                     </a>
                 </div>
-            </div>
-            <a href="#" class="button big mb100">СТАТЬ ЧАСТЬЮ КОМАНДЫ</a>
-            <div class="mb100">
-                <h3 class="subheader square mb40">ПАРТНЕРЫ</h3>
-                <div class="partners">
-                    <div class="partners__item">
-                        <img src="/img/partners/partner1.png"
-                             alt="Министерство промышленности и торговли Республики Татарстан" class="partners__img">
-                        <span>Министерство<br>промышленности и торговли<br>Республики Татарстан</span>
-                    </div>
-                    <div class="partners__item">
-                        <img src="/img/partners/partner2.png" alt="Агентство Стратегических Инициатив"
-                             class="partners__img">
-                        <span>Агентство<br>Стратегических Инициатив</span>
-                    </div>
-                    <div class="partners__item">
-                        <img src="/img/partners/partner3.png"
-                             alt="Министерство промышленности и торговли Республики Татарстан" class="partners__img">
-                        <span>Министерство<br>Здравоохранения<br>Республики Татарстан</span>
-                    </div>
-                    <div class="partners__item no-text">
-                        <img src="/img/partners/partner4.png" alt="Министерство Здравоохранения Республики Татарстан"
-                             class="partners__img">
-                    </div>
-                </div>
-            </div>
-            <div class="mb100">
-                <h3 class="subheader square mb40">О НАС ПИШУТ</h3>
-                <div class="body1 mb40">Проект «Связь» отмечают<br>на самом высоком уровне</div>
-                <div class="reviews">
-                    <div class="reviews__item">
-                        <div class="reviews__row">
-                            <img src="/img/reviews/review1.png" alt="Президент России">
-                            <span>Президент России</span>
-                        </div>
-                        <a href="#" class="reviews__link article">Заседание наблюдательного совета Агентства
-                            стратегических инициатив</a>
-                    </div>
-                    <div class="reviews__item">
-                        <div class="reviews__row">
-                            <img src="/img/reviews/review2.png" alt="Министерство Здравоохранения Республики Татарстан">
-                            <span>Министерство<br>Здравоохранения<br>Республики Татарстан</span>
-                        </div>
-                        <a href="#" class="reviews__link article">Медицинский сервис<br>из Татарстана попал в топ
-                            инициатив форума «Сильные идеи для нового времени»</a>
-                    </div>
-                </div>
-            </div>
-            <div class="mb120">
-                <h3 class="subheader square mb40">ДОСТИЖЕНИЯ</h3>
-                <div class="archievements">
-                    <div class="archievements__box square"><span class="body2">Топ-13 проектов форума «Сильные идеи для нового времени»</span>
-                    </div>
-                    <div class="archievements__box round"><span class="body2">Номинация «Начинание года 2021» на премии «Инде»</span>
-                    </div>
-                    <div class="archievements__box square"><span class="body2"> Номинация<br>«Digital-проекта&nbsp;года» в&nbsp;премии Enter</span>
-                    </div>
-                </div>
-            </div>
-            <div class="mb100">
-                <?php include('partials/contacts.php'); ?>
             </div>
         </div>
     </main>

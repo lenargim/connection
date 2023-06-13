@@ -14,28 +14,27 @@
     border-radius: 25px
     overflow: hidden
     cursor: pointer
-    &+span
-      display: inline-block
-      font: 600 25px/30px $mainFont
-      margin-top: 20px
-      @include max(1279)
-        font: 600 22px/26px $mainFont
     video
       display: block
       width: 100%
       object-fit: cover
       aspect-ratio: 36/24
-    &::after
-      content: ''
+      &:hover + .state svg
+        fill: #fafafa
+      &:active + .state svg
+        fill: #f2f2f2
+    .state
       position: absolute
       left: 50%
       top: 50%
       transform: translate(-50%, -50%)
-      width: 100px
-      height: 100px
       border-radius: 50%
-      background: #fff url("../img/svg/play.svg") center no-repeat
       z-index: 2
+      svg
+        width: 100px
+        height: 100px
+        fill: #fff
+
     &.playing:after
       display: none
   .app
@@ -63,27 +62,6 @@
       width: 120px
       aspect-ratio: 1/1
       border-radius: 10px
-  .team
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-    gap: 20px
-    &__img
-      background: #D9D9D9
-      border-radius: 25px
-      overflow: hidden
-    img
-      filter: grayscale(100%)
-    &__item
-      text-align: center
-      &:nth-child(16n + 3), &:nth-child(24n + 6), &:nth-child(24n + 12), &:nth-child(24n + 14), &:nth-child(24n + 21)
-        .team__img
-          border-radius: 50%
-      &:hover img
-        filter: grayscale(0%)
-    &__name
-      margin-bottom: 4px
-    &__position
-      color: #8C8C8C
   .partners
     display: grid
     grid-template-columns: repeat(2, 1fr)
@@ -147,40 +125,32 @@
         border-radius: 30px
       &.round
         border-radius: 50%
-  .contacts
-    display: flex
-    flex-direction: column
-    gap: 40px
-    align-items: center
   .download-fixed
     display: none
     position: fixed
-    left: 0
-    right: 0
     top: 230px
     z-index: 2
+    margin-left: auto
+    background: $black
+    border-radius: 20px
+    width: 250px
+    padding: 15px 11px 15px 15px
+    gap: 15px
+    align-items: center
+    color: #fff
+    font-size: 23px
+    right: calc((100vw - 1060px)/2)
+    &::after
+      content: ''
+      width: 10px
+      height: 10px
+      background: url("../img/svg/arrow-white.svg") center/contain no-repeat
+      position: absolute
+      top: 15px
+      right: 19px
     &.active
-      display: block
-    &__box
-      margin-left: auto
-      background: $black
-      border-radius: 20px
-      width: 250px
-      padding: 15px 11px 15px 15px
       display: flex
-      gap: 15px
-      align-items: center
-      color: #fff
-      position: relative
-      font-size: 23px
-      &::after
-        content: ''
-        width: 10px
-        height: 10px
-        background: url("../img/svg/arrow-white.svg") center/contain no-repeat
-        position: absolute
-        top: 15px
-        right: 19px
+
 
     img
       width: 70px

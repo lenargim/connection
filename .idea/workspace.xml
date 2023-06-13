@@ -2,46 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="619297f7-e18e-4dfe-a45d-36816832d731" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.bowerrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/app.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/roboto-bold-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/roboto-bolditalic-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/roboto-italic-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fonts/roboto-regular-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/images/dist/preview.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/images/src/preview.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/app.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/parts/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/parts/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/less/_config.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/less/blocks/_general.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/less/blocks/example-block.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/less/main.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/sass/_config.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/sass/blocks/_general.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/sass/blocks/example-block.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/sass/blocks/example-block.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/sass/main.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/styl/_config.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/styl/blocks/_general.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/styl/blocks/example-block.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/styl/main.styl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/app.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fonts/roboto-bold-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fonts/roboto-bolditalic-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fonts/roboto-italic-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fonts/roboto-regular-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/images/dist/preview.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/app.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/styles.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/styles.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/sprite-main.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprite-main.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/libs.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/libs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/textarea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/partials/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/partials/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/partials/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/partials/products-list.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/partials/products-list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/products-detailed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/products-detailed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/form.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/form.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/general.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/general.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/header.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/styles.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/styles.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vacancies-detailed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vacancies-detailed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/vacancies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/vacancies.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +34,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,19 +58,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/libs" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/libs" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/sass" />
       <recent name="$PROJECT_DIR$/app/partials" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/js" />
       <recent name="$PROJECT_DIR$/app/img/svg" />
       <recent name="$PROJECT_DIR$/app/img" />
       <recent name="$PROJECT_DIR$/app/partials" />
@@ -96,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685802731703</updated>
       <workItem from="1685802732943" duration="554000" />
-      <workItem from="1685803296865" duration="58035000" />
+      <workItem from="1685803296865" duration="77279000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,21 @@
+.team
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  gap: 20px
+  &__img
+    background: #D9D9D9
+    border-radius: 25px
+    overflow: hidden
+  img
+    filter: grayscale(100%)
+  &__item
+    text-align: center
+    &:nth-child(16n + 3), &:nth-child(24n + 6), &:nth-child(24n + 12), &:nth-child(24n + 14), &:nth-child(24n + 21)
+      .team__img
+        border-radius: 50%
+    &:hover img
+      filter: grayscale(0%)
+  &__name
+    margin-bottom: 4px
+  &__position
+    color: #8C8C8C

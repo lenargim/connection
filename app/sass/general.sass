@@ -263,6 +263,10 @@ h1
   margin-bottom: 100px
 .mb120
   margin-bottom: 120px
+.mt52
+  margin-top: 52px
+.mt100
+  margin-top: 100px
 
 .list
   display: flex
@@ -275,12 +279,31 @@ h1
     gap: 1em
     border-bottom: 2px solid $black
     text-transform: uppercase
-    &::after
-      content: ''
-      display: block
+    svg
       width: 24px
       height: 24px
-      background: url("../img/svg/list-arrow.svg") center/contain no-repeat
+      stroke: $black
+      transition-duration: 0s
+
+    &:hover
+      border-color: $orange
+      span
+        color: $orange
+      svg
+        stroke: $orange
+    &:focus
+      border-color: $black
+      span
+        color: $black
+      svg
+        stroke: $black
+    &:disabled
+      border-color: $black50
+      span
+        color: $black50
+      svg
+        stroke: $black50
+
 
 .ul
   font: 300 30px/42px $mainFont
@@ -305,83 +328,6 @@ h1
   grid-template-columns: repeat(2, 1fr)
   gap: 10px
 
-.select2
-  &-hidden-accessible
-    border: 0
-    clip: rect(0 0 0 0)
-    clip-path: inset(50%)
-    height: 1px
-    overflow: hidden
-    padding: 0
-    position: absolute
-    width: 0
-    white-space: nowrap
-  &-container
-    box-sizing: border-box
-    display: inline-block
-    margin: 0
-    position: relative
-    vertical-align: middle
-    border-radius: 10px
-    background: #FAFAFA
-    padding: 21px 75px 29px 12px
-    height: 78px
-    &--open
-      border-radius: 10px 10px 0 0
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
-  &-selection
-    position: absolute
-    left: 0
-    right: 0
-    top: 0
-    bottom: 0
-    cursor: pointer
-    &__rendered
-      white-space: nowrap
-      color: #686868
-      font: 400 23px/1.2 $mainFont
-      padding: 21px 75px 29px 12px
-    &__placeholder
-      position: absolute
-      padding: 21px 75px 29px 12px
-    &__arrow
-      b
-  &-dropdown
-    border-radius: 10px
-    box-sizing: border-box
-    display: block
-    position: absolute
-    z-index: 99
-    left: 0
-    background: #FAFAFA
-    &--below
-      top: 0
-      border-top: none
-      border-top-left-radius: 0
-      border-top-right-radius: 0
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
-  &-results
-    &__options
-      max-height: 220px
-      overflow-y: auto
-    &__option
-      cursor: pointer
-      font: 400 20px/1.2 $mainFont
-      padding: 20px 12px
-      position: relative
-      &::before
-        content: ''
-        position: absolute
-        left: 12px
-        right: 12px
-        top: 0
-        height: 1px
-        background: #eaeaea
-      &:hover
-        color: $orange
-
-  &-search--hide
-    display: none
 .list-text
   display: flex
   flex-direction: column

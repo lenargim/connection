@@ -11,4 +11,9 @@
             </clipPath>
         </defs>
     </symbol>
+    <svg id="list-arrow" viewBox="0 0 26 26" fill="none">
+        <path d="M25 1L1 25" stroke-width="2" stroke-linecap="round"/>
+        <path d="M5.23438 1H24.6461" stroke-width="2" stroke-linecap="round"/>
+        <path d="M25 20.4121L25 1.00035" stroke-width="2" stroke-linecap="round"/>
+    </svg>
 </svg>

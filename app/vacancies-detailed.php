@@ -76,20 +76,20 @@
             <form action="#" class="form mb100" autocomplete="off" name="vacancy">
                 <div class="form__rows mb20">
                     <div class="form__row">
-                        <input type="text" placeholder="ИМЯ*" name="name">
-<!--                        <div class="error">Введите имя на русском языке</div>-->
+                        <input type="text" placeholder="ИМЯ*" name="name" class="required lang">
+                        <div class="error">Введите имя на русском языке</div>
                     </div>
                     <div class="form__row">
-                        <input type="text" placeholder="ТЕЛЕФОН*" class="tel" name="phone">
-<!--                        <div class="error">Введите корректный номер телефона</div>-->
+                        <input type="text" placeholder="ТЕЛЕФОН*" class="tel required" name="phone">
+                        <div class="error">Введите корректный номер телефона</div>
                     </div>
                     <div class="form__row">
-                        <input type="text" placeholder="ПОЧТА*" name="email">
-<!--                        <div class="error">Введите корректный email</div>-->
+                        <input type="text" placeholder="ПОЧТА*" name="email" class="required email">
+                        <div class="error">Введите корректный email</div>
                     </div>
                     <div class="form__row">
-                        <input type="text" placeholder="ССЫЛКА НА РЕЗЮМЕ*" name="link">
-<!--                        <div class="error">Введите корректную ссылку</div>-->
+                        <input type="text" placeholder="ССЫЛКА НА РЕЗЮМЕ*" name="link" class="required url">
+                        <div class="error">Введите корректную ссылку</div>
                     </div>
                     <div class="form__row">
                         <textarea name="about" id="about" placeholder="РАССКАЖИТЕ О СЕБЕ"></textarea>
@@ -100,10 +100,30 @@
             </form>
             <h3 class="subheader mb40 square">ТАКЖЕ ИЩЕМ ПРЯМО СЕЙЧАС</h3>
             <ul class="list mb120">
-                <a href="/vacancies-detailed.php" class="list__item body1">HEAD OF PR</a>
-                <a href="/vacancies-detailed.php" class="list__item body1">HR МЕНЕДЖЕР</a>
-                <a href="/vacancies-detailed.php" class="list__item body1">КОНТЕНТ МЕНЕДЖЕР</a>
-                <a href="/vacancies-detailed.php" class="list__item body1">ГРАФИЧЕСКИЙ ДИЗАЙНЕР</a>
+                <a href="/vacancies-detailed.php" class="list__item body1">
+                    <span>HEAD OF PR</span>
+                    <svg>
+                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
+                    </svg>
+                </a>
+                <a href="/vacancies-detailed.php" class="list__item body1">
+                    <span>HR МЕНЕДЖЕР</span>
+                    <svg>
+                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
+                    </svg>
+                </a>
+                <a href="/vacancies-detailed.php" class="list__item body1">
+                    <span>КОНТЕНТ МЕНЕДЖЕР</span>
+                    <svg>
+                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
+                    </svg>
+                </a>
+                <a href="/vacancies-detailed.php" class="list__item body1">
+                    <span>ГРАФИЧЕСКИЙ ДИЗАЙНЕР</span>
+                    <svg>
+                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
+                    </svg>
+                </a>
             </ul>
         </div>
     </main>

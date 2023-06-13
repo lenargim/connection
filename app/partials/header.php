@@ -9,9 +9,9 @@
             <nav class="header__nav">
                 <li><a href="/" class="active">Главная</a></li>
                 <li><a href="/products.php">ПРОДУКТЫ И РЕШЕНИЯ</a></li>
-                <li><a href="/people">Люди</a></li>
+                <li><a href="/people.php">Люди</a></li>
                 <li><a href="/vacancies.php">Вакансии</a></li>
-                <li><a href="/contacts">Контакты</a></li>
+                <li><a href="/contacts.php">Контакты</a></li>
             </nav>
             <div class="header__lang">
                 <input type="radio" name="lang" id="lang-ru" checked>

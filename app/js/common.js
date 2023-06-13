@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $('.tel').mask('+7Z000000000', {translation: {'Z': {pattern: /[0-79]/}}});
   $('.video').on('click', function (e) {
     e.preventDefault();
     const video = $(this).find('video')[0];
@@ -63,6 +64,4 @@ $(document).ready(function () {
       $('.select').removeClass('open')
     }
   });
-
-
 })
