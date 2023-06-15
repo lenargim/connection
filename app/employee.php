@@ -29,8 +29,8 @@ $has_playlist = true;
             </div>
             <?php if ($has_inst && $has_playlist): ?>
                 <div class="employee__buttons mt52">
-                    <a href="#" class="button big">МОЙ ПЛЕЙЛИСТ</a>
-                    <a href="#" class="button big">INSTAGRAM</a>
+                    <a href="#" class="button big" target="_blank">МОЙ ПЛЕЙЛИСТ</a>
+                    <a href="#" class="button big" target="_blank">INSTAGRAM</a>
                 </div>
             <?php elseif ($has_inst): ?>
                 <a href="#" class="button big mt52">INSTAGRAM</a>
@@ -53,7 +53,7 @@ $has_playlist = true;
                             экскурсии и собираются делать гостиницу.</p>
                     </div>
                 </div>
-                <a href="/callback.php" class="button big mb120">СТАТЬ ЧАСТЬЮ КОМАНДЫ</a>
+                <a href="/callback.php" class="button big mb120" target="_blank">СТАТЬ ЧАСТЬЮ КОМАНДЫ</a>
             </div>
         </div>
     </main>

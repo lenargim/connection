@@ -73,56 +73,24 @@
                     удовольствия?) Предлагай! поддержим!)</p>
             </div>
             <h3 class="subheader mb40 square">ВАКАНСИЯ АНАЛИТИКА</h3>
-            <form action="#" class="form mb100" autocomplete="off" name="vacancy">
-                <div class="form__rows mb20">
-                    <div class="form__row">
-                        <input type="text" placeholder="ИМЯ*" name="name" class="required lang">
-                        <div class="error">Введите имя на русском языке</div>
-                    </div>
-                    <div class="form__row">
-                        <input type="text" placeholder="ТЕЛЕФОН*" class="tel required" name="phone">
-                        <div class="error">Введите корректный номер телефона</div>
-                    </div>
-                    <div class="form__row">
-                        <input type="text" placeholder="ПОЧТА*" name="email" class="required email">
-                        <div class="error">Введите корректный email</div>
-                    </div>
-                    <div class="form__row">
-                        <input type="text" placeholder="ССЫЛКА НА РЕЗЮМЕ*" name="link" class="required url">
-                        <div class="error">Введите корректную ссылку</div>
-                    </div>
-                    <div class="form__row">
-                        <textarea name="about" id="about" placeholder="РАССКАЖИТЕ О СЕБЕ"></textarea>
-                    </div>
-                </div>
-                <div class="form__after mb52 body5">*поля обязательны для заполнения</div>
-                <button class="button big" type="submit">ОТПРАВИТЬ</button>
-            </form>
+            <?php include('partials/form.php'); ?>
             <h3 class="subheader mb40 square">ТАКЖЕ ИЩЕМ ПРЯМО СЕЙЧАС</h3>
             <ul class="list mb120">
                 <a href="/vacancies-detailed.php" class="list__item body1">
                     <span>HEAD OF PR</span>
-                    <svg>
-                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
-                    </svg>
+                    <?php echo file_get_contents("img/svg/list-arrow.svg"); ?>
                 </a>
                 <a href="/vacancies-detailed.php" class="list__item body1">
                     <span>HR МЕНЕДЖЕР</span>
-                    <svg>
-                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
-                    </svg>
+                    <?php echo file_get_contents("img/svg/list-arrow.svg"); ?>
                 </a>
                 <a href="/vacancies-detailed.php" class="list__item body1">
                     <span>КОНТЕНТ МЕНЕДЖЕР</span>
-                    <svg>
-                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
-                    </svg>
+                    <?php echo file_get_contents("img/svg/list-arrow.svg"); ?>
                 </a>
                 <a href="/vacancies-detailed.php" class="list__item body1">
                     <span>ГРАФИЧЕСКИЙ ДИЗАЙНЕР</span>
-                    <svg>
-                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
-                    </svg>
+                    <?php echo file_get_contents("img/svg/list-arrow.svg"); ?>
                 </a>
             </ul>
         </div>

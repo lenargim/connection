@@ -1,0 +1,48 @@
+.overlay
+  display: none
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background: $black
+  z-index: 3
+  &.active
+    display: block
+  .close
+    width: 27px
+    height: 27px
+    position: absolute
+    top: 5vh
+    right: 5vw
+    cursor: pointer
+    &::before, &::after
+      position: absolute
+      content: ''
+      display: block
+      width: 38px
+      left: 0
+      height: 2px
+      background: #fff
+      border-radius: 1px
+    &::before
+      top: 0
+      transform: rotate(45deg)
+      transform-origin: 1px top
+    &::after
+      bottom: 0
+      transform: rotate(-45deg)
+      transform-origin: 1px bottom
+
+.modal
+  background: #fff
+  border-radius: 30px
+  padding: 40px 35px
+  width: 100%
+  max-width: 520px
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  top: 5vh
+  max-height: 90vh
+  overflow-y: auto

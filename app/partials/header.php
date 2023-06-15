@@ -1,11 +1,7 @@
 <div class="header">
     <div class="container">
         <div class="header__wrap">
-            <a href="/" class="header__logo">
-                <svg>
-                    <use xlink:href="<?php echo $sprite; ?>#logo"></use>
-                </svg>
-            </a>
+            <a href="/" class="header__logo"><?php echo file_get_contents("img/svg/logo.svg"); ?></a>
             <nav class="header__nav">
                 <li><a href="/" class="active">Главная</a></li>
                 <li><a href="/products.php">ПРОДУКТЫ И РЕШЕНИЯ</a></li>
@@ -23,4 +19,8 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="preloader">
+    <?php echo file_get_contents("img/svg/logo.svg"); ?>
 </div>

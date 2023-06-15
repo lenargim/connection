@@ -7,6 +7,9 @@
   display: flex
   align-items: center
   transition-duration: 0s
+  font: 400 23px/1.2 $mainFont
+  color: $black50
+  text-transform: uppercase
   .container
     height: auto
   &.fixed
@@ -48,3 +51,17 @@
     label
       width: 40px
       cursor: pointer
+
+.preloader
+  position: fixed
+  background: #fff
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 4
+  svg
+    width: 95px

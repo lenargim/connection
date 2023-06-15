@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  $('.tel').mask('+7Z000000000', {translation: {'Z': {pattern: /[0-79]/}}});
   $('.video').on('click', function (e) {
     e.preventDefault();
     const video = $(this).find('video')[0];
@@ -64,4 +63,52 @@ $(document).ready(function () {
       $('.select').removeClass('open')
     }
   });
+
+
+  $('.info__question').on('click', function () {
+    $(this).parent().toggleClass('open');
+  })
+
+
+  $('.open-modal-product').on('click', function () {
+    $('.overlay-product').addClass('active');
+  })
+
+  $('.open-modal-practice').on('click', function () {
+    $('.overlay-practice').addClass('active');
+  })
+
+  $('.close').on('click', function () {
+    $('.overlay').removeClass('active');
+  })
+
+
+  /* Preloader */
+  let preloader = $('.preloader'),
+    imagesCount = $('img').length,
+    loadedImg = 0;
+
+  if (imagesCount > 0) {
+    $('html, body').css('overflow', 'hidden');
+    for (let i = 0; i < imagesCount; i++) {
+      let img_copy = new Image();
+      img_copy.src = document.images[i].src;
+      img_copy.onload = img_load;
+      img_copy.onerror = img_load;
+    }
+
+    function img_load() {
+      loadedImg++;
+      if (loadedImg == imagesCount) {
+        preloader.hide()
+        $('html, body').css('overflow', '');
+      }
+    }
+  } else {
+    preloader.hide()
+  }
+
+  /* End Preloader */
+
+
 })

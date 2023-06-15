@@ -15,27 +15,19 @@
             <ul class="list mb120">
                 <a href="/vacancies-detailed.php" class="list__item body1">
                     <span>HEAD OF PR</span>
-                    <svg>
-                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
-                    </svg>
+                    <?php echo file_get_contents("img/svg/list-arrow.svg"); ?>
                 </a>
                 <a href="/vacancies-detailed.php" class="list__item body1">
                     <span>HR МЕНЕДЖЕР</span>
-                    <svg>
-                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
-                    </svg>
+                    <?php echo file_get_contents("img/svg/list-arrow.svg"); ?>
                 </a>
                 <a href="/vacancies-detailed.php" class="list__item body1">
                     <span>КОНТЕНТ МЕНЕДЖЕР</span>
-                    <svg>
-                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
-                    </svg>
+                    <?php echo file_get_contents("img/svg/list-arrow.svg"); ?>
                 </a>
                 <a href="/vacancies-detailed.php" class="list__item body1">
                     <span>ГРАФИЧЕСКИЙ ДИЗАЙНЕР</span>
-                    <svg>
-                        <use xlink:href="<?php echo $sprite; ?>#list-arrow"></use>
-                    </svg>
+                    <?php echo file_get_contents("img/svg/list-arrow.svg"); ?>
                 </a>
             </ul>
         </div>

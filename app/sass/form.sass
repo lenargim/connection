@@ -12,19 +12,21 @@
       color: $error
       margin-top: 10px
   input, textarea
-    font: 300 50px/60px $mainFont
+    display: block
+    font: 300 50px/1.2 $mainFont
     border-bottom: 2px solid $black
     color: $black
-    box-sizing: border-box
-    height: 60px
+    box-sizing: content-box
+    height: 1.2em
+    overflow: hidden
     &::placeholder
       color: rgba(0, 0, 0, 0.5)
     & + .error
       display: none
-  textarea
-    height: 1.2em
-    overflow: hidden
+  input
+    line-height: 1
   .hiddendiv
+    min-height: 60px
     display: block
     position: absolute
     z-index: -1

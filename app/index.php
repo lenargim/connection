@@ -1,7 +1,7 @@
 <?php include('partials/head.php'); ?>
 <?php include('partials/header.php'); ?>
     <main class="main">
-        <a href="#" class="download-fixed">
+        <a href="/download.php" class="download-fixed">
             <img src="/img/logo-no-bg.png" alt="logo">
             <span>Скачать приложение</span>
         </a>
@@ -9,7 +9,7 @@
             <svg class="connection">
                 <use xlink:href="<?php echo $sprite_main; ?>#connection"></use>
             </svg>
-            <a href="#" class="button presentation mb40">СКАЧАТЬ ПРЕЗЕНТАЦИЮ</a>
+            <a href="#" class="button presentation mb40" download>СКАЧАТЬ ПРЕЗЕНТАЦИЮ</a>
             <div class="video mb100">
                 <video preload="none" poster="/img/video.jpg">
                     <source type="video/webm"
@@ -17,7 +17,7 @@
                 </video>
                 <div class="state">
                     <svg>
-                        <use xlink:href="<?php echo $sprite_main; ?>#play""></use>
+                        <use xlink:href="<?php echo $sprite_main; ?>#play"></use>
                     </svg>
                 </div>
             </div>
@@ -182,7 +182,7 @@
                     </a>
                 </div>
             </div>
-            <a href="#" class="button big mb100">СТАТЬ ЧАСТЬЮ КОМАНДЫ</a>
+            <a href="/callback.php" class="button big mb100">СТАТЬ ЧАСТЬЮ КОМАНДЫ</a>
             <div class="mb100">
                 <h3 class="subheader square mb40">ПАРТНЕРЫ</h3>
                 <div class="partners">
@@ -216,7 +216,7 @@
                             <img src="/img/reviews/review1.png" alt="Президент России">
                             <span>Президент России</span>
                         </div>
-                        <a href="#" class="reviews__link article">Заседание наблюдательного совета Агентства
+                        <a href="#" class="reviews__link article" target="_blank">Заседание наблюдательного совета Агентства
                             стратегических инициатив</a>
                     </div>
                     <div class="reviews__item">
@@ -224,7 +224,7 @@
                             <img src="/img/reviews/review2.png" alt="Министерство Здравоохранения Республики Татарстан">
                             <span>Министерство<br>Здравоохранения<br>Республики Татарстан</span>
                         </div>
-                        <a href="#" class="reviews__link article">Медицинский сервис<br>из Татарстана попал в топ
+                        <a href="#" class="reviews__link article" target="_blank">Медицинский сервис<br>из Татарстана попал в топ
                             инициатив форума «Сильные идеи для нового времени»</a>
                     </div>
                 </div>
