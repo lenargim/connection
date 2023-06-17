@@ -5,6 +5,12 @@
     width: 100%
     aspect-ratio: 1060/231
     margin: 40px 0
+  .reverse
+    display: flex
+    flex-direction: column
+    gap: 40px
+    @include between($minTabletV, $maxTabletV)
+      flex-direction: column-reverse
   .presentation
     width: 100%
     text-transform: uppercase
@@ -38,16 +44,39 @@
     &.playing:after
       display: none
   .app
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-    gap: 50px
+    @include between($minTabletV, $maxTabletV)
+      width: 80vw
+      margin: 0 auto
+      &__pagination
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 20px
+        position: unset
+        margin-top: 52px
+        span.swiper-pagination-bullet
+          margin: 0
+          width: 23px
+          height: 23px
+          background: #F5F5F5
+          opacity: 1
+          &-active
+            background: $black
+  .app .swiper-wrapper
+    @include min($minTabletG)
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      gap: 50px
+    @include between($minTabletG, $container)
+      gap: 20px
     img
       aspect-ratio: 227/450
-    &__item
+    .app__item
       text-align: center
       display: flex
       flex-direction: column
       gap: 30px
+
   .download
     display: flex
     align-items: center
@@ -85,11 +114,16 @@
         filter: grayscale(100%)
       span
         font: 500 20px/1.3 $mainFont
+      @include between($minTabletV, $maxTabletV)
+        gap: 20px
+        padding: 24px
   .reviews
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: 320px
     gap: 20px
+    @include between($minTabletV, $maxTabletV)
+      grid-template-rows: 250px
     &__item
       padding: 24px 28px
       display: flex
@@ -101,6 +135,8 @@
     &__link
       margin-top: auto
       display: block
+      @include between($minTabletV, $maxTabletV)
+        font: 400 23px/1.2 $mainFont
     &__row
       display: flex
       align-items: center
@@ -113,6 +149,16 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 20px
+    @include between($minTabletV, $maxTabletV)
+      position: relative
+      left: -22px
+      width: 100vw
+      padding: 0 22px
+      overflow-x: auto
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        display: none
     &__box
       display: flex
       align-items: center
@@ -121,6 +167,8 @@
       background: #F5F5F5
       aspect-ratio: 1/1
       padding: 6.5px
+      @include between($minTabletV, $maxTabletV)
+        width: 39vw
       &.square
         border-radius: 30px
       &.round
@@ -151,8 +199,11 @@
     &.active
       display: flex
 
-
     img
       width: 70px
       background: #fff
       border-radius: 20px
+    @include between($minTabletG, $container)
+      right: 15px
+    @include between($minTabletV, $maxTabletV)
+      right: 22px

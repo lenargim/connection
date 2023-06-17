@@ -16,7 +16,6 @@ body
   font: 300 18px/1.2 $mainFont
   margin: 0
   width: 100%
-  padding: 70px 0 0
   display: flex
   flex-direction: column
   justify-content: flex-start
@@ -25,6 +24,9 @@ body
   color: $black
   min-height: 100vh
   overflow: hidden
+  padding: 70px 0 0
+  @include between($minTabletV, $maxTabletV)
+    padding: 180px 0 0
 html
   height: 100%
 
@@ -33,7 +35,8 @@ footer,
 section,
 main
   position: relative
-  margin-top: 100px
+  @include min($minTabletG)
+    margin-top: 100px
 button
   font-size: initial
   cursor: pointer
@@ -46,6 +49,8 @@ button
   padding: 0 15px
   margin: 0 auto
   max-width: 1090px
+  @include between($minTabletV, $maxTabletV)
+    padding: 0 22px
 
 input
   margin: 0
@@ -193,6 +198,8 @@ address
     background: $black50
   &:disabled
     background: rgba(0, 0, 0, .5)
+  @include between($minTabletV, $maxTabletV)
+    font-size: 28px
 
 
 .no-scroll
@@ -214,6 +221,7 @@ address
     background-color: $black
   &.square:before
     content: ''
+    border-radius: 2px
   &.round:before
     content: ''
     border-radius: 50%
@@ -235,6 +243,7 @@ h1
   a
     font-weight: 400
     text-decoration: underline
+    white-space: nowrap
 .body5
   font: 300 23px/1.2 $mainFont
 .article
@@ -242,6 +251,8 @@ h1
   text-decoration-line: underline
 .caption
   font: 400 20px/1.2 $mainFont
+
+
 
 .mb10
   margin-bottom: 10px
@@ -265,6 +276,29 @@ h1
   margin-top: 52px
 .mt100
   margin-top: 100px
+//@include between($minTabletV, $maxTabletV)
+//  .mb10-tablet
+//    margin-bottom: 10px
+//  .mb12-tablet
+//    margin-bottom: 12px
+//  .mb16-tablet
+//    margin-bottom: 16px
+//  .mb20-tablet
+//    margin-bottom: 20px
+//  .mb40-tablet
+//    margin-bottom: 40px
+//  .mb52-tablet
+//    margin-bottom: 52px
+//  .mb80-tablet
+//    margin-bottom: 80px
+//  .mb100-tablet
+//    margin-bottom: 100px
+//  .mb120-tablet
+//    margin-bottom: 120px
+//  .mt52-tablet
+//    margin-top: 52px
+//  .mt100-tablet
+//    margin-top: 100px
 
 .list
   display: flex
@@ -305,8 +339,13 @@ h1
 
 .ul
   font: 300 30px/42px $mainFont
-  &.columns-2
-    columns: 2
+  @include min($minTabletG)
+    &.columns-2
+      columns: 2
+  @include between($minTabletV, $maxTabletV)
+    display: flex
+    flex-direction: column
+    gap: 16px
   li
     margin-left: .6em
     position: relative
@@ -372,3 +411,11 @@ h1
   text-decoration: underline
   & *
     font: 400 23px/31px $mainFont
+
+.mobile
+  @include min($minTabletG)
+    display: none !important
+
+.desktop
+  @include max($maxTabletV)
+    display: none !important

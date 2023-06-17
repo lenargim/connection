@@ -1,0 +1,51 @@
+.mobile
+  &-header
+    &__top
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      svg
+        width: 283px
+      .burger
+        width: 63px
+        height: 63px
+        border-radius: 50%
+        background: $black
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 5px
+        flex-direction: column
+        margin-left: auto
+        span, &::before, &::after
+          height: 3px
+          width: 35px
+          background: #fff
+          display: block
+        &::before, &::after
+          content: ''
+          transition: all .3s ease
+  &-menu
+    display: none
+    margin-top: 50px
+    &__download
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      gap: 20px
+      background: $black
+      color: #fff
+      margin-top: 60px
+      border-radius: 20px
+      font: 400 30px/1 $mainFont
+      padding: 20px
+      text-transform: initial
+      img
+        width: 92px
+        aspect-ratio: 1/1
+  &-revert
+    @include between($minTabletV, $maxTabletV)
+      display: flex
+      flex-direction: column-reverse

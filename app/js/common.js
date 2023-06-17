@@ -53,7 +53,8 @@ $(document).ready(function () {
     const id = $(this).attr('id')
     $('.select').addClass('filled')
     $('.select__choose').text(text).attr('id', id)
-    $('.select').removeClass('open')
+    $('.select').removeClass('open');
+    $('.select__content').slideDown(300)
 
   })
   $(document).on('mouseup', 'body', function(e){
@@ -111,4 +112,9 @@ $(document).ready(function () {
   /* End Preloader */
 
 
+  $('.burger').on('click', function (){
+    const header = $('.header');
+    header.toggleClass('menued')
+    header.hasClass('menued') ? $('html, body').css('overflow', 'hidden') : $('html, body').css('overflow', 'auto')
+  })
 })

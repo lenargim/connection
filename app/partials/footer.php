@@ -8,6 +8,7 @@
         <a href="/" class="caption">© 2021-2023 «svyaz.io»</a>
     </div>
 </footer>
+
 <script src="js/libs.js"></script>
 <script src="js/common.js"></script>
 </body>

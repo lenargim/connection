@@ -8,6 +8,10 @@
     gap: 40px
     margin: 0 auto
     max-width: 640px
-  &__text a
-    text-decoration: unset
-    font-weight: 300
+  &__text
+    margin-bottom: 40px
+    a
+      text-decoration: unset
+      font-weight: 300
+    @include between($minTabletV, $maxTabletV)
+      margin-bottom: 52px

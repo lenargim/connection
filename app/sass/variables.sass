@@ -7,6 +7,13 @@ $gray: #808080
 
 $mainFont: "Manrope", sans-serif
 
+$container: 1090
+
+$minTabletG: 1024
+$maxTabletV: $minTabletG - 1
+$minTabletV: 768
+$maxMobile: $minTabletV - 1
+
 @mixin max($breakpoint)
   @media screen and (max-width: $breakpoint + 'px')
     @content
@@ -16,5 +23,5 @@ $mainFont: "Manrope", sans-serif
     @content
 
 @mixin between($min, $max)
-  @media screen and (min-width: $min + 'px') and (max-width: $max - 1 + 'px')
+  @media screen and (min-width: $min + 'px') and (max-width: $max + 'px')
     @content

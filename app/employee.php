@@ -13,7 +13,7 @@ $has_playlist = true;
                 <a href="/people.php">Люди</a>
                 <a href="/employee.php">Волкова Руфина</a>
             </div>
-            <div class="employee__twin">
+            <div class="employee__top">
                 <div>
                     <h3 class="subheader square mb20">ВОЛКОВА РУФИНА</h3>
                     <h3 class="subheader round mb20">HR</h3>
@@ -38,7 +38,7 @@ $has_playlist = true;
             <div class="employee__bottom mt100">
                 <h3 class="subheader square mb40">МЕСТА</h3>
                 <p class="body1 mb40">Места Казани которые меня вдохновляют делать то, что я делаю в Связи.</p>
-                <div class="employee__twin mb100">
+                <div class="employee__twin">
                     <div>
                         <h3 class="subheader round mb10">СКУРАТОВ НА ЩАПОВА</h3>
                         <p class="body3">Эти ребята каждый день делают настроение нашей команды лучше, знают всех по
