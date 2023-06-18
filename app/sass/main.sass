@@ -9,8 +9,10 @@
     display: flex
     flex-direction: column
     gap: 40px
-    @include between($minTabletV, $maxTabletV)
+    @include max($maxTabletV)
       flex-direction: column-reverse
+    @include max($maxMobile)
+      gap: 20px
   .presentation
     width: 100%
     text-transform: uppercase
@@ -43,25 +45,41 @@
 
     &.playing:after
       display: none
+    @include max($maxMobile)
+      border-radius: 30px
+      video
+        aspect-ratio: 400/496
+
   .app
-    @include between($minTabletV, $maxTabletV)
-      width: 80vw
-      margin: 0 auto
+    @include max($maxTabletV)
       &__pagination
         display: flex
         align-items: center
         justify-content: center
-        gap: 20px
         position: unset
-        margin-top: 52px
         span.swiper-pagination-bullet
           margin: 0
-          width: 23px
-          height: 23px
+          aspect-ratio: 1/1
           background: #F5F5F5
           opacity: 1
           &-active
             background: $black
+    @include between($minTabletV, $maxTabletV)
+      width: 80vw
+      margin: 0 auto
+      &__pagination
+        margin-top: 52px
+        gap: 20px
+        span.swiper-pagination-bullet
+          width: 23px
+          height: 23px
+    @include max($maxMobile)
+      &__pagination
+        margin-top: 40px
+        gap: 12px
+        span.swiper-pagination-bullet
+          width: 16px
+          height: 16px
   .app .swiper-wrapper
     @include min($minTabletG)
       display: grid
@@ -96,6 +114,8 @@
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: repeat(2, 200px)
     gap: 20px
+    @include max($maxMobile)
+      grid-template-columns: 1fr
     &__item
       background: #F5F5F5
       border-radius: 30px
@@ -117,25 +137,38 @@
       @include between($minTabletV, $maxTabletV)
         gap: 20px
         padding: 24px
+      @include max($maxMobile)
+        gap: 24px
+        padding: 24px
+        min-height: 150px
+        span
+          font: 400 18px/1.2 $mainFont
+        img
+          max-height: 100px
+          max-width: 100px
+        &.no-text img
+          max-width: 293px
   .reviews
     display: grid
     grid-template-columns: repeat(2, 1fr)
-    grid-template-rows: 320px
     gap: 20px
-    @include between($minTabletV, $maxTabletV)
-      grid-template-rows: 250px
+    @include max($maxMobile)
+      grid-template-columns: 1fr
     &__item
       padding: 24px 28px
       display: flex
       flex-direction: column
       background: #F5F5F5
       border-radius: 30px
+      height: 320px
       &:hover img
         filter: grayscale(0%)
+      @include max($maxTabletV)
+        height: 250px
     &__link
       margin-top: auto
       display: block
-      @include between($minTabletV, $maxTabletV)
+      @include max($maxTabletV)
         font: 400 23px/1.2 $mainFont
     &__row
       display: flex
@@ -149,10 +182,10 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 20px
-    @include between($minTabletV, $maxTabletV)
+    @include max($maxTabletV)
       position: relative
-      left: -22px
       width: 100vw
+      left: -22px
       padding: 0 22px
       overflow-x: auto
       -ms-overflow-style: none
@@ -169,6 +202,8 @@
       padding: 6.5px
       @include between($minTabletV, $maxTabletV)
         width: 39vw
+      @include max($maxMobile)
+        width: 300px
       &.square
         border-radius: 30px
       &.round
@@ -205,5 +240,7 @@
       border-radius: 20px
     @include between($minTabletG, $container)
       right: 15px
-    @include between($minTabletV, $maxTabletV)
+    @include max($maxTabletV)
       right: 22px
+    @include max($maxMobile)
+      font-size: 23px

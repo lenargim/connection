@@ -16,6 +16,9 @@
     top: 5vh
     right: 5vw
     cursor: pointer
+    @include max($maxMobile)
+      top: 40px
+      right: 30px
     &::before, &::after
       position: absolute
       content: ''
@@ -46,3 +49,19 @@
   top: 5vh
   max-height: 90vh
   overflow-y: auto
+  @include max($maxMobile)
+    background: transparent
+    color: #fff
+    top: 100px
+    .subheader:before
+      background-color: #fff
+    input
+      color: #fff
+      background: transparent
+      &::placeholder
+        color: rgba(255, 255, 255,.5)
+    .form__after
+      color: #D2D0D0
+    .button
+      background: #fff
+      color: $black

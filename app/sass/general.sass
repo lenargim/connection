@@ -27,6 +27,9 @@ body
   padding: 70px 0 0
   @include between($minTabletV, $maxTabletV)
     padding: 180px 0 0
+  @include max($maxMobile)
+    padding: 100px 0 0
+    font-size: 14px
 html
   height: 100%
 
@@ -49,7 +52,7 @@ button
   padding: 0 15px
   margin: 0 auto
   max-width: 1090px
-  @include between($minTabletV, $maxTabletV)
+  @include max($maxTabletV)
     padding: 0 22px
 
 input
@@ -200,6 +203,9 @@ address
     background: rgba(0, 0, 0, .5)
   @include between($minTabletV, $maxTabletV)
     font-size: 28px
+  @include max($maxMobile)
+    font-size: 23px
+    height: 80px
 
 
 .no-scroll
@@ -211,14 +217,16 @@ address
 .subheader
   font: 600 23px/1.2 $mainFont
   display: flex
-  align-items: center
+  align-items: flex-start
   gap: 10px
   text-transform: uppercase
   &::before
     width: 24px
-    height: 24px
+    aspect-ratio: 1/1
     display: block
     background-color: $black
+    flex-shrink: 0
+    margin-top: 2px
   &.square:before
     content: ''
     border-radius: 2px
@@ -227,15 +235,26 @@ address
     border-radius: 50%
   &.center
     justify-content: center
+  @include max($maxMobile)
+    font-size: 18px
+    &::before
+      width: 20px
+      margin-top: 1px
 
 h1
   font: 400 50px/1.2 $mainFont
+  @include max($maxMobile)
+    font: 400 30px/42px $mainFont
 .body1
   font: 300 50px/1.2 $mainFont
   p:not(:last-of-type)
     margin-bottom: 20px
+  @include max($maxMobile)
+    font-size: 30px
 .body2
   font: 400 30px/1.1 $mainFont
+  @include max($maxMobile)
+    font-size: 23px
 .body3
   font: 300 30px/1.4 $mainFont
   p:not(:last-of-type)
@@ -244,13 +263,19 @@ h1
     font-weight: 400
     text-decoration: underline
     white-space: nowrap
+  @include max($maxMobile)
+    font-size: 23px
 .body5
   font: 300 23px/1.2 $mainFont
+  @include max($maxMobile)
+    font-size: 18px
 .article
   font: 400 30px/1.2 $mainFont
   text-decoration-line: underline
 .caption
   font: 400 20px/1.2 $mainFont
+  @include max($maxMobile)
+    font: 300 18px/1.2 $mainFont
 
 
 
@@ -264,42 +289,24 @@ h1
   margin-bottom: 20px
 .mb40
   margin-bottom: 40px
+  //@include max($maxMobile)
+  //  margin-bottom: 20px
 .mb52
   margin-bottom: 52px
+  @include max($maxMobile)
+    margin-bottom: 40px
 .mb80
   margin-bottom: 80px
+  @include max($maxMobile)
+    margin-bottom: 52px
 .mb100
   margin-bottom: 100px
+  @include max($maxMobile)
+    margin-bottom: 80px
 .mb120
   margin-bottom: 120px
-.mt52
-  margin-top: 52px
-.mt100
-  margin-top: 100px
-//@include between($minTabletV, $maxTabletV)
-//  .mb10-tablet
-//    margin-bottom: 10px
-//  .mb12-tablet
-//    margin-bottom: 12px
-//  .mb16-tablet
-//    margin-bottom: 16px
-//  .mb20-tablet
-//    margin-bottom: 20px
-//  .mb40-tablet
-//    margin-bottom: 40px
-//  .mb52-tablet
-//    margin-bottom: 52px
-//  .mb80-tablet
-//    margin-bottom: 80px
-//  .mb100-tablet
-//    margin-bottom: 100px
-//  .mb120-tablet
-//    margin-bottom: 120px
-//  .mt52-tablet
-//    margin-top: 52px
-//  .mt100-tablet
-//    margin-top: 100px
-
+  @include max($maxMobile)
+    margin-bottom: 100px
 .list
   display: flex
   flex-direction: column
@@ -315,6 +322,7 @@ h1
       width: 24px
       height: 24px
       stroke: $black
+      flex-shrink: 0
       transition-duration: 0s
 
     &:hover
@@ -339,13 +347,6 @@ h1
 
 .ul
   font: 300 30px/42px $mainFont
-  @include min($minTabletG)
-    &.columns-2
-      columns: 2
-  @include between($minTabletV, $maxTabletV)
-    display: flex
-    flex-direction: column
-    gap: 16px
   li
     margin-left: .6em
     position: relative
@@ -360,10 +361,22 @@ h1
       border-radius: 50%
       display: inline-block
       margin-top: 18px
+  @include min($minTabletG)
+    &.columns-2
+      columns: 2
+  @include between($minTabletV, $maxTabletV)
+    display: flex
+    flex-direction: column
+    gap: 16px
+  @include max($maxMobile)
+    font-size: 23px
 .buttons
   display: grid
   grid-template-columns: repeat(2, 1fr)
   gap: 10px
+  @include max($maxMobile)
+    grid-template-columns: 1fr
+    gap: 20px
 
 .list-text
   display: flex
@@ -376,6 +389,8 @@ h1
       content: ': '
     span:last-child
       font-weight: 300
+  @include max($maxMobile)
+    gap: 10px
 
 .text
   p:not(:last-of-type)
@@ -402,6 +417,8 @@ h1
         border-radius: 50%
         display: inline-block
         margin-top: 12px
+  @include max($maxMobile)
+    font-size: 23px
 
 .centered-links
   display: grid
@@ -418,4 +435,11 @@ h1
 
 .desktop
   @include max($maxTabletV)
+    display: none !important
+
+.mobile-only
+  @include min($minTabletV)
+    display: none !important
+.mobile-hide
+  @include max($maxMobile)
     display: none !important

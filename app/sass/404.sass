@@ -1,4 +1,8 @@
 .not-found
   margin: 120px 0
+  @include max($maxMobile)
+    margin: 40px 0 120px
   &__title
     font: 400 150px/117.6% $mainFont
+    @include max($maxMobile)
+      font: 400 100px/1.2 $mainFont

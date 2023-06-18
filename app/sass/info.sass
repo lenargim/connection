@@ -18,6 +18,10 @@
     cursor: pointer
     padding-bottom: 10px
     border-bottom: 2px solid $black
+    @include max($maxMobile)
+      gap: 16px
+      text-transform: initial
+      font-size: 23px
     &:after
       content: ''
       display: block
@@ -53,3 +57,5 @@
           border-radius: 50%
           display: inline-block
           margin-top: 12px
+    @include max($maxMobile)
+      font-size: 23px

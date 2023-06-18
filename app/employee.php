@@ -17,25 +17,28 @@ $has_playlist = true;
                 <div>
                     <h3 class="subheader square mb20">ВОЛКОВА РУФИНА</h3>
                     <h3 class="subheader round mb20">HR</h3>
+                    <div class="mobile-only mb20">
+                        <img class="employee__img" src="/img/employee.jpg" alt="ВОЛКОВА РУФИНА">
+                    </div>
                     <p class="body1">Я в «Связи»,
                         потому&nbsp;что это
                         важно&nbsp;и&nbsp;ценно
                         для&nbsp;настоящего
                         и&nbsp;будущего.</p>
                 </div>
-                <div>
+                <div class="mobile-hide">
                     <img class="employee__img" src="/img/employee.jpg" alt="ВОЛКОВА РУФИНА">
                 </div>
             </div>
             <?php if ($has_inst && $has_playlist): ?>
-                <div class="employee__buttons mt52">
+                <div class="buttons">
                     <a href="#" class="button big" target="_blank">МОЙ ПЛЕЙЛИСТ</a>
                     <a href="#" class="button big" target="_blank">INSTAGRAM</a>
                 </div>
             <?php elseif ($has_inst): ?>
-                <a href="#" class="button big mt52">INSTAGRAM</a>
+                <a href="#" class="button big">INSTAGRAM</a>
             <?php endif; ?>
-            <div class="employee__bottom mt100">
+            <div class="employee__bottom">
                 <h3 class="subheader square mb40">МЕСТА</h3>
                 <p class="body1 mb40">Места Казани которые меня вдохновляют делать то, что я делаю в Связи.</p>
                 <div class="employee__twin">

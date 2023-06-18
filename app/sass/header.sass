@@ -11,23 +11,19 @@
   text-transform: uppercase
   background: #fff
   z-index: 3
-  @include min($minTabletG)
-    height: 70px
-    .container
-      height: auto
   &.fixed
     position: fixed
     border-bottom: 1px solid #DCD8D8
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
     z-index: 3
-    @include min($minTabletG)
-      height: 74px
-  @include between($minTabletV, $maxTabletV)
-    border-bottom: 1px solid #DCD8D8
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
-    padding: 32px 0
+  @include min($minTabletG)
+    height: 70px
+    .container
+      height: auto
     &.fixed
-      padding: 24px 0
+      height: 74px
+  @include max($maxTabletV)
+    &.fixed
       .mobile-header__top svg
         display: none
     &.menued
@@ -44,6 +40,16 @@
           transform: rotate(45deg)
         &::after
           transform: rotate(-45deg)
+  @include between($minTabletV, $maxTabletV)
+    border-bottom: 1px solid #DCD8D8
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
+    padding: 32px 0
+    &.fixed
+      padding: 24px 0
+  @include max($maxMobile)
+    padding: 12px 0
+    &.fixed
+      padding: 10px 0
 
   &__wrap
     display: flex
@@ -51,12 +57,16 @@
     justify-content: space-between
     @include between($minTabletV, $maxTabletV)
       gap: 22px
+    @include max($maxMobile)
+      gap: 14px
   &__logo svg
     display: block
     height: 30px
     aspect-ratio: 35/30
     @include between($minTabletV, $maxTabletV)
       height: 63px
+    @include max($maxMobile)
+      height: 40px
   &__nav
     display: flex
     align-items: center
@@ -67,12 +77,17 @@
       @include min($minTabletG)
         &:hover, &.active
           color: $orange
-    @include between($minTabletV, $maxTabletV)
+    @include max($maxTabletV)
       flex-direction: column
-      gap: 40px
       align-items: flex-start
+    @include between($minTabletV, $maxTabletV)
+      gap: 40px
       a
         font: 400 50px/1.2 $mainFont
+    @include max($maxMobile)
+      gap: 20px
+      a
+        font: 300 30px/1.2 $mainFont
   &__lang
     display: flex
     align-items: center
@@ -88,13 +103,18 @@
     label
       width: 40px
       cursor: pointer
-    @include between($minTabletV, $maxTabletV)
+    @include max($maxTabletV)
       justify-content: flex-start
       margin-top: 40px
-      gap: 40px
-      font: 400 50px/1.2 $mainFont
       label
         width: auto
+    @include between($minTabletV, $maxTabletV)
+      gap: 40px
+      font: 400 50px/1.2 $mainFont
+    @include max($maxMobile)
+      gap: 24px
+      font: 400 30px/1.4 $mainFont
+
 .preloader
   position: fixed
   background: #fff

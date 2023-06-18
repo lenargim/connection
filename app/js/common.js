@@ -72,6 +72,7 @@ $(document).ready(function () {
 
 
   $('.open-modal-product').on('click', function () {
+    $('html, body').css('overflow', 'hidden');
     $('.overlay-product').addClass('active');
   })
 
@@ -80,6 +81,7 @@ $(document).ready(function () {
   })
 
   $('.close').on('click', function () {
+    $('html, body').css('overflow', '');
     $('.overlay').removeClass('active');
   })
 

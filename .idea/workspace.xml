@@ -3,26 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="619297f7-e18e-4dfe-a45d-36816832d731" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/404.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/styles.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/styles.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/download.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/download.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/connection.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/connection.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/partials/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/partials/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/partials/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/partials/head.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/partials/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/products-detailed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/products-detailed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/download.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/download.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/swiper.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/swiper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/404.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/404.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/breadcrumbs.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/breadcrumbs.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/contacts.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/contacts.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sass/employee.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/employee.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sass/footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/footer.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/form.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/form.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sass/general.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/general.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sass/header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/header.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/info.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/info.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/styles.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/styles.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/mobile.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/mobile.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/modal.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/modal.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/select.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/select.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/sass/team.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/team.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/variables.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/variables.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/thanks.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/thanks.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/thanks.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/thanks.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,7 @@
       <workItem from="1685802732943" duration="554000" />
       <workItem from="1685803296865" duration="115983000" />
       <workItem from="1686870927161" duration="98000" />
-      <workItem from="1686871038767" duration="15775000" />
+      <workItem from="1686871038767" duration="27791000" />
     </task>
     <servers />
   </component>

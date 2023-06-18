@@ -7,9 +7,11 @@
       justify-content: flex-end
       svg
         width: 283px
+        @include max($maxMobile)
+          width: 182px
       .burger
         width: 63px
-        height: 63px
+        aspect-ratio: 1/1
         border-radius: 50%
         background: $black
         display: flex
@@ -26,6 +28,12 @@
         &::before, &::after
           content: ''
           transition: all .3s ease
+        @include max($maxMobile)
+          width: 40px
+          gap: 3.5px
+          span, &::before, &::after
+            width: 22px
+            height: 2px
   &-menu
     display: none
     margin-top: 50px
@@ -45,7 +53,8 @@
       img
         width: 92px
         aspect-ratio: 1/1
-  &-revert
-    @include between($minTabletV, $maxTabletV)
-      display: flex
-      flex-direction: column-reverse
+      @include max($maxMobile)
+        gap: 16px
+        font-size: 23px
+        img
+          width: 70px
