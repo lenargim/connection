@@ -48,9 +48,10 @@ $(document).ready(function () {
 
   const formInputs = form.find('input, textarea');
 
-  formInputs.on('click, change, keyup', function (e) {
+  formInputs.on('change blur', function (e) {
+    console.log(e.target.value)
     const input = $(this);
-    input.addClass('touched');
+    if (!input.hasClass('touched')) input.addClass('touched');
     const val = input.val();
     const type = input.attr('name');
     const errors = fields.find(field => field.name === type).errors;

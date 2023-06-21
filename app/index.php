@@ -66,7 +66,7 @@
                 <img src="/img/qr.jpg" alt="Скачать приложение">
                 <span class="body3">Скачать приложение</span>
             </div>
-            <a href="#" class="button presentation mobile mb100" download>СКАЧАТЬ ПРЕЗЕНТАЦИЮ</a>
+            <a href="/download.php" class="button presentation mobile mb100">СКАЧАТЬ ПРИЛОЖЕНИЕ</a>
             <div class="mb100">
                 <h3 class="subheader square mb40">ПРОДУКТЫ И РЕШЕНИЯ «СВЯЗИ»</h3>
                 <p class="body3 mb40">Мы разрабатываем технологичные решения, которые трансформируют

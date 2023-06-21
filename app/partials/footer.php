@@ -9,7 +9,7 @@
     </div>
 </footer>
 
-<script src="js/libs.js"></script>
+<!--<script src="js/libs.js"></script>-->
 <script src="js/common.js"></script>
 </body>
 </html>
