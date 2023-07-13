@@ -12,7 +12,7 @@
             <div class="reverse mb100">
                 <a href="#" class="button presentation" download>СКАЧАТЬ ПРЕЗЕНТАЦИЮ</a>
                 <div class="video">
-                    <video preload="none" poster="/img/video.jpg">
+                    <video preload="none" poster="/img/video.jpg" playsinline src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/54/Yawning_kitten.ogv/Yawning_kitten.ogv.480p.vp9.webm">
                         <source type="video/webm"
                                 src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/54/Yawning_kitten.ogv/Yawning_kitten.ogv.480p.vp9.webm">
                     </video>
@@ -266,5 +266,9 @@
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
+
+    <!--Iphone inline only in main page-->
+
+    <script src="js/inline-video.min.js"></script>
 
 <?php include('partials/footer.php'); ?>

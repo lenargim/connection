@@ -1,11 +1,15 @@
 $(document).ready(function () {
-  $('.video').on('click', function (e) {
+  const videoContainer = $('.video');
+  const videoTag = $('video');
+  enableInlineVideo(videoTag.get(0));
+
+  videoContainer.on('click', function (e) {
     e.preventDefault();
     const video = $(this).find('video')[0];
     video.paused ? video.play() : video.pause()
     $(this).toggleClass('playing')
   })
-  $('video').on('ended', function () {
+  videoTag.on('ended', function () {
     $(this)[0].load();
     $(this).parents('.video').removeClass('playing')
   });
